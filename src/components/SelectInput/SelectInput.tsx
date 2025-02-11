@@ -9,7 +9,10 @@ const SelectInput: React.FC<SelectInputProps> = ({
   options,
   required,
   onChange,
+  defaultValue,
+  placeholder,
 }) => {
+  console.log("SelectInput rendered", (placeholder || defaultValue? "": undefined));
   return (
     <div className="form-field border border-black rounded-md p-4 mb-6 relative">
       <Label label={label} required={required} />
@@ -18,7 +21,13 @@ const SelectInput: React.FC<SelectInputProps> = ({
           onChange={(e) => onChange(e.target.value)} 
           required={required}
           className="w-full border border-none rounded-md px-3 py-2 focus:outline-none appearance-none" 
+          defaultValue={placeholder || defaultValue? "": undefined} 
         >
+        {(placeholder || defaultValue) ? (
+            <option value="" disabled={!!placeholder} hidden={!!placeholder}>
+              {placeholder || defaultValue}
+            </option>
+        ): (<option value="" hidden />)}
         {options.map((option: string) => (
           <option key={option} value={option}>
             {option}

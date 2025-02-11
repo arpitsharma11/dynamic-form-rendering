@@ -9,6 +9,8 @@ export interface SelectInputProps {
     options: string[] | [];
     required?: boolean;
     onChange: (value: string) => void;
+    defaultValue?: string;
+    placeholder?: string;
 }
 
 
@@ -18,6 +20,8 @@ export interface FormField {
     required?: boolean;
     options?: string[];
     conditionalFields?: { [key: string]: FormField[] };
+    defaultValue?: string;
+    placeholder?: string;
 }
   
 export interface FormConfig {

@@ -42,6 +42,8 @@ const DynamicForm: React.FC<FormRendererProps> = ({ config }) => {
               options={field.options || []}
               required={field.required}
               onChange={(value) => handleChange(field.label, value)}
+              defaultValue={field.defaultValue}
+              placeholder={field.placeholder}
             />
             {field.conditionalFields &&
               Object.keys(field.conditionalFields).map((condition) => {
