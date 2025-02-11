@@ -54,7 +54,6 @@ const formConfig: FormConfig = {
 const App: React.FC = () => {
   return (
     <div className="w-1/2">
-      <h1>Dynamic Form</h1>
       <DynamicForm config={formConfig} />
     </div>
   );
