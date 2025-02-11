@@ -1,13 +1,8 @@
 import React from "react";
 import { ChevronDown } from 'lucide-react';
 import Label from "../Label/Label";
+import { SelectInputProps } from "@/common/types";
 
-interface SelectInputProps {
-  label: string;
-  options: string[];
-  required?: boolean;
-  onChange: (value: string) => void;
-}
 
 const SelectInput: React.FC<SelectInputProps> = ({
   label,

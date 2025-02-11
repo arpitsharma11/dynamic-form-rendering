@@ -1,11 +1,6 @@
 import React from "react";
 import Label from "../Label/Label";
-
-interface NumberInputProps {
-  label: string;
-  required?: boolean;
-  onChange: (value: number) => void;
-}
+import { NumberInputProps } from "@/common/types";
 
 const NumberInput: React.FC<NumberInputProps> = ({
   label,

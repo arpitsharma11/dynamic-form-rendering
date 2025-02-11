@@ -1,15 +1,11 @@
 import React, { useState } from "react";
-import { FormConfig, FormField } from "../../common/types";
+import { FormField, FormRendererProps } from "../../common/types";
 import TextInput from "../TextInput/TextInput";
 import SelectInput from "../SelectInput/SelectInput";
 import NumberInput from "../NumberInput/NumberInput";
 import CheckboxInput from "../CheckboxInput/CheckboxInput";
 import RadioInput from "../RadioInput/RadioInput";
 import TextareaInput from "../TextareaInput/TextareaInput";
-
-interface FormRendererProps {
-  config: FormConfig;
-}
 
 const DynamicForm: React.FC<FormRendererProps> = ({ config }) => {
   const [formData, setFormData] = useState<{ [key: string]: any }>({});

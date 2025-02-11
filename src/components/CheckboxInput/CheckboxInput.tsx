@@ -1,10 +1,5 @@
+import { CheckboxInputProps } from "@/common/types";
 import React from "react";
-
-interface CheckboxInputProps {
-  label: string;
-  required?: boolean;
-  onChange: (value: boolean) => void;
-}
 
 const CheckboxInput: React.FC<CheckboxInputProps> = ({
   label,

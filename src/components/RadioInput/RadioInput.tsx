@@ -1,12 +1,6 @@
 import React from "react";
 import Label from "../Label/Label";
-
-interface RadioInputProps {
-  label: string;
-  options: string[];
-  required?: boolean;
-  onChange: (value: string) => void;
-}
+import { RadioInputProps } from "@/common/types";
 
 const RadioInput: React.FC<RadioInputProps> = ({
   label,

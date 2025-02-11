@@ -1,11 +1,6 @@
 import React from "react";
 import Label from "../Label/Label";
-
-interface TextareaInputProps {
-  label: string;
-  required?: boolean;
-  onChange: (value: string) => void;
-}
+import { TextareaInputProps } from "@/common/types";
 
 const TextareaInput: React.FC<TextareaInputProps> = ({
   label,

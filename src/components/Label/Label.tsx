@@ -1,9 +1,5 @@
+import { LabelProps } from "@/common/types";
 import React from "react";
-
-interface LabelProps {
-    label: string;
-    required?: boolean;
-}
 
 const Label: React.FC<LabelProps> = ({ label, required }) => {
     return (
